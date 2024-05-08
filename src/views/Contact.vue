@@ -1,15 +1,15 @@
 <script>
   export default {
     created() {
-    var scripts = [
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap",
-    ];
-    scripts.forEach(script => {
-      let tag = document.createElement("script");
-      tag.setAttribute("src", script);
-      document.head.appendChild(tag);
-    });
-  }
+        var scripts = [
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap",
+        ];
+        scripts.forEach(script => {
+        let tag = document.createElement("script");
+        tag.setAttribute("src", script);
+        document.head.appendChild(tag);
+        });
+    }
   }
 </script>
 

@@ -1,59 +1,115 @@
-<script setup>
+<script>
+import Slider from '../components/HomeComp/Slider.vue'	
+export default {
+	components: {
+		Slider,
+	},
+  data() {
+    return {
+      slider: { title: 'Prepare for new future', 
+				discription: 'Our work is <br>presentation of our <br>capabilities.',
+				btnLink: '/services',
+				btnText: 'Get started',
+			},
+	  intro: { title: 'We are creative & expert people', 
+				discription: 'We work with business & provide solution to client with their business problem',
+				ourWork: [
+							{
+								img: 'ti-desktop color-one',
+								title: 'Modern & Responsive design',
+								discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.',
+							},
+							{
+								img: 'ti-medall color-one',
+								title: 'Awarded licensed company',
+								discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.',
+							},
+							{
+								img: 'ti-layers-alt color-one',		
+								title: 'build your website professionally',
+								discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.',
+							}
+						]
+			},
+	  aboutUs: {
+					colImg: '',
+					subTitle: 'What we are',	
+					title: 'We are dynamic team of creative people',
+					icon: '',
+					heading: 'We are Perfect Solution',
+					discription: 'We provide consulting services in the area of IFRS and management reporting, helping companies to reach their highest level. We optimize business processes, making them easier.',
+					btnLink: '',
+					btnText: 'Get started',
+	  			},
+			// intro: { title: 'We are creative & expert people', 
+			// discription: 'We work with business & provide solution to client with their business problem',
+			// services: [
+			// 			{
+			// 				img: 'ti-desktop color-one',
+			// 				title: 'Modern & Responsive design',
+			// 				discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.',
+			// 			},
+			// 			{
+			// 				img: 'ti-medall color-one',
+			// 				title: 'Awarded licensed company',
+			// 				discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.',
+			// 			},
+			// 			{
+			// 				img: 'ti-layers-alt color-one',		
+			// 				title: 'build your website professionally',
+			// 				discription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.',
+			// 			}
+			// 		]
+			// },
+			
+		}
+  }
+}
 </script>
 
 <template>
 
-
+	
 	<div class="main-wrapper ">
 		<!-- Slider Start -->
+		<slider>
+	<template v-slot:Home>
+		<h1>This is slider section</h1>
+	
 		<section class="slider">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-9 col-md-10">
 						<div class="block">
-							<span class="d-block mb-3 text-white text-capitalize">Prepare for new future</span>
-							<h1 class="animated fadeInUp mb-5">Our work is <br>presentation of our <br>capabilities.
+							<span class="d-block mb-3 text-white text-capitalize">{{ slider.title }}</span>
+							<h1 class="animated fadeInUp mb-5" v-html="slider.discription">
 							</h1>
-							<a href="#" target="_blank" class="btn btn-main animated fadeInUp btn-round-full">Get
-								started<i class="btn-icon fa fa-angle-right ml-2"></i></a>
+							<a :href="slider.btnLink" target="_blank" class="btn btn-main animated fadeInUp btn-round-full">{{ slider.btnText }}<i class="btn-icon fa fa-angle-right ml-2"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+	</template>
+</slider>
 		<!-- Section Intro Start -->
 
 		<section class="section intro">
-			<div class="container">
+			<div class="container" >
 				<div class="row ">
 					<div class="col-lg-8">
 						<div class="section-title">
-							<span class="h6 text-color ">We are creative & expert people</span>
-							<h2 class="mt-3 content-title">We work with business & provide solution to client with their
-								business problem </h2>
+							<span class="h6 text-color ">{{intro.title}}</span>
+							<h2 class="mt-3 content-title">{{ intro.discription }} </h2>
 						</div>
 					</div>
 				</div>
 				<div class="row justify-content-center">
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="col-lg-4 col-md-6 col-12" v-for="(item, index) in intro.ourWork" :key="item+index">
 						<div class="intro-item mb-5 mb-lg-0">
-							<i class="ti-desktop color-one"></i>
-							<h4 class="mt-4 mb-3">Modern & Responsive design</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="intro-item mb-5 mb-lg-0">
-							<i class="ti-medall color-one"></i>
-							<h4 class="mt-4 mb-3">Awarded licensed company</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6">
-						<div class="intro-item">
-							<i class="ti-layers-alt color-one"></i>
-							<h4 class="mt-4 mb-3">Build your website Professionally</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, ducimus.</p>
+							<i :class="item.img"></i>
+							<h4 class="mt-4 mb-3">{{ item.title }}</h4>
+							<p>{{ item.discription }}</p>
 						</div>
 					</div>
 				</div>
@@ -69,16 +125,13 @@
 				<div class="row">
 					<div class="col-lg-6 offset-lg-6 offset-md-0">
 						<div class="about-item ">
-							<span class="h6 text-color">What we are</span>
-							<h2 class="mt-3 mb-4 position-relative content-title">We are dynamic team of creative people
+							<span class="h6 text-color">{{ aboutUs.subTitle }}</span>
+							<h2 class="mt-3 mb-4 position-relative content-title">{{ aboutUs.title }}
 							</h2>
 							<div class="about-content">
-								<h4 class="mb-3 position-relative">We are Perfect Solution</h4>
-								<p class="mb-5">We provide consulting services in the area of IFRS and management
-									reporting, helping companies to reach their highest level. We optimize business
-									processes, making them easier.</p>
-
-								<a href="#" class="btn btn-main btn-round-full">Get started</a>
+								<h4 class="mb-3 position-relative">{{ aboutUs.heading }}</h4>
+								<p class="mb-5">{{ aboutUs.discription }}</p>
+								<a href="#" class="btn btn-main btn-round-full">{{ aboutUs.btnText }}</a>
 							</div>
 						</div>
 					</div>

@@ -1,4 +1,5 @@
-<script setup>
+<script>
+
 </script>
 
 <template>
@@ -115,6 +116,7 @@
             </div>
         </section>
         <!-- section Counter End  -->
+
         <!--  Section Services Start -->
         <section class="section team">
             <div class="container">

@@ -5,7 +5,13 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div>
-    <Header></Header>
+    <Header>
+      
+      <template v-slot:header>
+        <h1>this is slot test</h1>
+      </template>
+    </Header>
+    
   </div>
   <Footer></Footer>
 </template>

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue';
-import services from '@/views/services.vue';
+import Services from '@/views/Services.vue';
 import Portfolio from '@/views/Portfolio.vue';
 import Contact from '@/views/Contact.vue';
 import OurCompany from '@/views/about/OurCompany.vue';
@@ -17,37 +17,37 @@ const routes=[
     },
     {
         name: 'OurCompany',
-        path: '/OurCompany',
+        path: '/about/ourcompany',
         component: OurCompany
     },
     {
         name: 'Pricing',
-        path: '/Pricing',
+        path: '/about/pricing',
         component: Pricing
     },
     {
-        name: 'services',
-        path: '/services',
-        component: services
+        name: 'Services',
+        path: '/Services',
+        component: Services
     },
     {
-        name: 'portfolio', 
+        name: 'Portfolio', 
         path: '/portfolio',
         component: Portfolio
     },
     {
         name: 'Grid',
-        path: '/Grid',
+        path: '/blog/Grid',
         component: Grid
     },
     {
         name: 'Sidebar',
-        path: '/Sidebar',
+        path: '/blog/Sidebar',
         component: Sidebar
     },
     {
         name: 'Single',
-        path: '/Single',
+        path: '/blog/Single',
         component: Single
     },
     {

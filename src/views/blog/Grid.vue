@@ -26,7 +26,7 @@
         <div class="row">
 	<div class="col-lg-6 col-md-6 mb-5">
 		<div class="blog-item">
-			<img src="/src/assets/images/blog/1.jpg" alt="" class="img-fluid rounded">
+			<img src="../assets/images/blog/1.jpg" alt="" class="img-fluid rounded">
 
 			<div class="blog-item-content bg-white p-5">
 				<div class="blog-item-meta bg-gray py-1 px-2">
@@ -45,7 +45,7 @@
 
 	<div class="col-lg-6 col-md-6 mb-5">
 		<div class="blog-item">
-			<img src="/src/assets/images/blog/2.jpg" alt="" class="img-fluid rounded">
+			<img src="../assets/images/blog/2.jpg" alt="" class="img-fluid rounded">
 
 			<div class="blog-item-content bg-white p-5">
 				<div class="blog-item-meta bg-gray py-1 px-2">
@@ -64,7 +64,7 @@
 
 	<div class="col-lg-6 col-md-6 mb-5">
 		<div class="blog-item">
-			<img src="/src/assets/images/blog/3.jpg" alt="" class="img-fluid rounded">
+			<img src="../assets/images/blog/3.jpg" alt="" class="img-fluid rounded">
 
 			<div class="blog-item-content bg-white p-5">
 				<div class="blog-item-meta bg-gray py-1 px-2">
@@ -82,7 +82,7 @@
 	</div>
 	<div class="col-lg-6 col-md-6 mb-5">
 		<div class="blog-item">
-			<img src="/src/assets/images/blog/4.jpg" alt="" class="img-fluid rounded">
+			<img src="../assets/images/blog/4.jpg" alt="" class="img-fluid rounded">
 
 			<div class="blog-item-content bg-white p-5">
 				<div class="blog-item-meta bg-gray py-1 px-2">
